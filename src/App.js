@@ -1,9 +1,16 @@
 import React from "react";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>React Landing Page</h1>
+      <Home />
+      <About />
+      <Contact />
+      <Footer />
     </div>
   );
 };
