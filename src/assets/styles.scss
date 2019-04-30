@@ -1,9 +1,5 @@
 @import "variables.scss";
 
-// can also be relative import
-// @import "./variables.scss";
-
-// we can use the $primaryColor variable now
 div {
   color: $primaryColor;
 }
