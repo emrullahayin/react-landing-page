@@ -1,0 +1,17 @@
+.navbar {
+  >.container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 992px) {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}

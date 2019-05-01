@@ -1,0 +1,25 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "base/typography";
+@import "pages/header";
+@import "pages/home";
+
+section {
+  text-align: center;
+  height: 50vh;
+  background-color: $color-lightblue;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  +section {
+    background-color: $color-red;
+
+    +section {
+      background-color: $color-lightgray;
+      color: $color-red;
+    }
+  }
+}
