@@ -98,6 +98,7 @@
 
     &.collapsed {
       span {
+        background-color: #fff !important;
         &:nth-child(1) {
           transform: rotate(135deg);
           margin-top: 7px;
