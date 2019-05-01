@@ -4,15 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
-
 const Header = () => {
   return (
     <header>
       <Navbar bg="none" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="#home" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span />
+            <span />
+            <span />
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
