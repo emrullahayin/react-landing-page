@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import $ from "jquery";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -9,26 +8,43 @@ import Contact from "./components/Contact";
 import "./assets/styles/main.scss";
 
 const App = () => {
-  const handleScroll = () => {
-    var scroll = $(window).scrollTop();
-    var height = $(".navbar").innerHeight();
-    scroll >= height
-      ? $(".navbar").addClass("sticky")
-      : $(".navbar").removeClass("sticky");
-  };
-
   useEffect(() => {
-    handleScroll();
-    $(".nav-link").on("click", function(e) {
-      e.preventDefault();
-      $(document).off("scroll");
-      $(".nav-link").each(function() {
-        $(this).removeClass("active");
+    let mainNavLinks = document.querySelectorAll("nav a.nav-link");
+    let navElement = document.querySelector("nav");
+
+    mainNavLinks.forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        let target = document.querySelector(event.target.hash);
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       });
-      $(this).addClass("active");
     });
 
-    window.addEventListener("scroll", handleScroll);
+    window.scrollY > navElement.offsetHeight &&
+      navElement.classList.add("sticky");
+
+    window.addEventListener("scroll", event => {
+      let fromTop = window.scrollY;
+      fromTop > navElement.offsetHeight
+        ? navElement.classList.add("sticky")
+        : navElement.classList.remove("sticky");
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
   });
 
   return (
