@@ -184,6 +184,12 @@
         padding-top: 63px;
       }
     }
+
+    .navbar-toggler {
+      >span {
+        background-color: $color-black;
+      }
+    }
   }
 
   @media (min-width: 992px) {
