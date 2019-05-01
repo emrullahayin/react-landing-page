@@ -4,6 +4,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  background-attachment: fixed;
+
   @media (min-width: 992px) {
     height: 100vh;
     max-height: 720px;
