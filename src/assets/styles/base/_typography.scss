@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin-ext');
 
+html {
+  font-size: 14px
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -7,4 +11,12 @@ body {
 a,
 a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 100%;
+  }
 }
