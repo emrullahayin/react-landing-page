@@ -10,12 +10,12 @@ const Header = () => {
     $("body").addClass("this-react");
   });
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="none" expand="lg" fixed="top">
       <Container>
         <Navbar.Brand href="#home">React</Navbar.Brand>
-        <Navbar.Toggle aria-controls="gordion-navbar-nav" />
-        <Navbar.Collapse id="gordion-navbar-nav">
-          <Nav className="ml-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#contact">About</Nav.Link>

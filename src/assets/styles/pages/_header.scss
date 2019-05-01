@@ -1,4 +1,14 @@
+.fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
+}
+
 .navbar {
+  background-color: transparent;
+
   >.container {
     display: -ms-flexbox;
     display: flex;
@@ -13,5 +23,36 @@
   @media (min-width: 992px) {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    padding: rem(25) 0;
+  }
+
+  .nav-link {
+    font-size: rem(14);
+    margin: 0 rem(25);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    color: #fff;
+    position: relative;
+
+    @media (min-width: rem(992)) {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(3);
+        bottom: rem(-3);
+        left: 0;
+        background-color: $color-red;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &:hover:after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
   }
 }
