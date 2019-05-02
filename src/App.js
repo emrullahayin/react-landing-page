@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -8,9 +8,14 @@ import Contact from "./components/Contact";
 import "./assets/styles/main.scss";
 
 const App = () => {
-  window.onload = function() {
+  
+  useEffect(() => {
     let mainNavLinks = document.querySelectorAll("nav a.nav-link");
     let navElement = document.querySelector("nav");
+    window.onload = function() {
+      window.scrollY > navElement.offsetHeight &&
+        navElement.classList.add("sticky");
+    };
 
     mainNavLinks.forEach(link => {
       link.addEventListener("click", event => {
@@ -22,9 +27,6 @@ const App = () => {
         });
       });
     });
-
-    window.scrollY > navElement.offsetHeight &&
-      navElement.classList.add("sticky");
 
     window.addEventListener("scroll", event => {
       let fromTop = window.scrollY;
@@ -45,7 +47,7 @@ const App = () => {
         }
       });
     });
-  };
+  }, []);
 
   return (
     <div className="App">
