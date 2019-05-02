@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "description": "react landing page",
-  "main": "index.js",
   "author": {
     "name": "Emrullah Ayın",
     "email": "ayinemrullah@gmail.com",
