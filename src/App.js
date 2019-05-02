@@ -8,7 +8,6 @@ import Contact from "./components/Contact";
 import "./assets/styles/main.scss";
 
 const App = () => {
-  
   useEffect(() => {
     let mainNavLinks = document.querySelectorAll("nav a.nav-link");
     let navElement = document.querySelector("nav");
@@ -47,7 +46,7 @@ const App = () => {
         }
       });
     });
-  }, []);
+  });
 
   return (
     <div className="App">
