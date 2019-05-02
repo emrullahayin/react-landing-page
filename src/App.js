@@ -23,12 +23,14 @@ const App = () => {
       });
     });
 
-    window.scrollY > navElement.offsetHeight &&
-      navElement.classList.add("sticky");
-
+    window.onload = function() {
+      window.scrollY > navElement.clientHeight &&
+        navElement.classList.add("sticky");
+    };
+    
     window.addEventListener("scroll", event => {
       let fromTop = window.scrollY;
-      fromTop > navElement.offsetHeight
+      fromTop > navElement.clientHeight
         ? navElement.classList.add("sticky")
         : navElement.classList.remove("sticky");
 
@@ -37,7 +39,7 @@ const App = () => {
 
         if (
           section.offsetTop <= fromTop &&
-          section.offsetTop + section.offsetHeight > fromTop
+          section.offsetTop + section.clientHeight > fromTop
         ) {
           link.classList.add("active");
         } else {
