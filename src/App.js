@@ -5,46 +5,51 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
+import $ from "jquery";
+
 import "./assets/styles/main.scss";
 
 const App = () => {
   useEffect(() => {
-    let mainNavLinks = document.querySelectorAll("nav a.nav-link");
-    let navElement = document.querySelector("nav");
+    let mainNavLinks = $("nav a.nav-link");
+    let navElement = $("nav");
+    let scrollTop = $(window).scrollTop();
 
-    mainNavLinks.forEach(link => {
-      link.addEventListener("click", event => {
-        event.preventDefault();
-        let target = document.querySelector(event.target.hash);
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      });
+    activeTab(scrollTop);
+
+    mainNavLinks.on("click", function(event) {
+      event.preventDefault();
+      let target = $(event.target.hash);
+      $("html, body").animate(
+        {
+          scrollTop: target.offset().top
+        },
+        100
+      );
     });
 
-    window.scrollY > navElement.offsetHeight &&
-      navElement.classList.add("sticky");
+    $(window).on("scroll", function() {
+      let fromTop = $(window).scrollTop();
+      activeTab(fromTop);
+    });
 
-    window.addEventListener("scroll", event => {
-      let fromTop = window.scrollY;
-      fromTop > navElement.offsetHeight
-        ? navElement.classList.add("sticky")
-        : navElement.classList.remove("sticky");
+    function activeTab(top) {
+      top > navElement.innerHeight()
+        ? navElement.addClass("sticky")
+        : navElement.removeClass("sticky");
 
-      mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-
+      mainNavLinks.each(function() {
+        let section = $("" + this.hash + "");
         if (
-          section.offsetTop <= fromTop &&
-          section.offsetTop + section.offsetHeight > fromTop
+          section.offset().top <= top &&
+          section.offset().top + section.innerHeight() > top
         ) {
-          link.classList.add("active");
+          $(this).addClass("active");
         } else {
-          link.classList.remove("active");
+          $(this).removeClass("active");
         }
       });
-    });
+    }
   });
 
   return (
