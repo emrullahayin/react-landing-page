@@ -33,16 +33,16 @@ const App = () => {
       activeTab(fromTop);
     });
 
-    function activeTab(top) {
-      top > navElement.innerHeight()
+    function activeTab(sTop) {
+      sTop > navElement.innerHeight()
         ? navElement.addClass("sticky")
         : navElement.removeClass("sticky");
 
       mainNavLinks.each(function() {
         let section = $("" + this.hash + "");
         if (
-          section.offset().top <= top &&
-          section.offset().top + section.innerHeight() > top
+          section.offset().top <= sTop &&
+          section.offset().top + section.innerHeight() > sTop
         ) {
           $(this).addClass("active");
         } else {
