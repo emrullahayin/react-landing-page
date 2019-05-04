@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -53,14 +53,14 @@ const App = () => {
   });
 
   return (
-    <div className="App">
+    <Fragment>
       <Header />
       <main>
         <Home />
         <About />
         <Contact />
       </main>
-    </div>
+    </Fragment>
   );
 };
 
