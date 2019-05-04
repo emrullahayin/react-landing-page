@@ -6,7 +6,6 @@
 
 section {
   text-align: center;
-  height: 100vh;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -14,6 +13,7 @@ section {
 
   +section {
     background-color: $color-red;
+    height: 100vh;
 
     +section {
       background-color: $color-lightgray;
