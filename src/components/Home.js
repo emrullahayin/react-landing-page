@@ -10,7 +10,7 @@ const Section = styled.section`
   position: relative;
   background-attachment: fixed;
   background-image: url(${bgImg});
-
+  
   @media (min-width: 992px) {
     height: 100vh;
     max-height: 720px;

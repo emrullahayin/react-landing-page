@@ -99,6 +99,7 @@
     &.collapsed {
       span {
         background-color: #fff !important;
+
         &:nth-child(1) {
           transform: rotate(135deg);
           margin-top: 7px;
@@ -122,7 +123,7 @@
   }
 
   .nav-link {
-    font-size: rem(14);
+    @include font-size(14);
     margin: 0;
     font-weight: bold;
     line-height: normal;
@@ -159,7 +160,7 @@
 
       padding: 15px 0;
       border-bottom: 1px solid #19212d;
-      font-size: rem(18);
+      @include font-size(18);
       font-weight: 300;
     }
 
