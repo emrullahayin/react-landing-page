@@ -3,6 +3,8 @@ import React from "react";
 import bgImg from "../assets/img/bg-home.jpg";
 import styled from "styled-components";
 
+import Arrow from "./Icons/Arrow";
+
 const Section = styled.section`
   position: relative;
   padding-top: 138px;
@@ -18,7 +20,7 @@ const Section = styled.section`
     padding-left: 110px;
     padding-right: 110px;
     padding-top: 279px;
-    padding-bottom: 271px;
+    padding-bottom: 111px;
   }
 
   &:after {
@@ -73,7 +75,17 @@ const SubTitle = styled.h5`
     max-width: 385px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 49px;
   }
+`;
+
+const Box = styled.div`
+  width: 105px;
+  height: 105px;
+  border: 15px solid #fb434b;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 `;
 
 const Home = () => {
@@ -88,6 +100,9 @@ const Home = () => {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </SubTitle>
+        <Box>
+          <Arrow />
+        </Box>
       </div>
     </Section>
   );
