@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Demo from "./Icons/Demo";
+
 const Section = styled.section`
   padding: 30px 0 225px;
 `;
@@ -28,6 +30,9 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  &:hover {
+    transform: translateY(-5px) !important;
+  }
 `;
 
 const IconWrap = styled.div`
@@ -37,6 +42,19 @@ const IconWrap = styled.div`
   border: solid 1px #eff2f9;
   background-color: #f8faff;
   margin-bottom: 30px;
+  position: relative;
+  > svg {
+    transition: all 0.3s ease-in;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    > svg {
+      transform: translate(-50%, -50%) rotateY(360deg);
+    }
+  }
 `;
 
 const BoxTitle = styled.h4`
@@ -60,10 +78,12 @@ const About = () => {
       <div className="container">
         <SectionTitle>Lorem ipsum dolor sit amet</SectionTitle>
         <SubTitle>Lorem ipsum dolor sit amet</SubTitle>
-        <div class="row">
-          <div class="col-lg-4">
+        <div className="row">
+          <div className="col-lg-4">
             <Box data-aos="fade-right">
-              <IconWrap />
+              <IconWrap>
+                <Demo />
+              </IconWrap>
               <BoxTitle>Declarative</BoxTitle>
               <Text>
                 React makes it painless to create interactive UIs. Design simple
@@ -73,9 +93,11 @@ const About = () => {
               </Text>
             </Box>
           </div>
-          <div class="col-lg-4">
+          <div className="col-lg-4">
             <Box data-aos="fade-up">
-              <IconWrap />
+              <IconWrap>
+                <Demo />
+              </IconWrap>
               <BoxTitle>Component-Based</BoxTitle>
               <Text>
                 Since component logic is written in JavaScript instead of
@@ -84,9 +106,11 @@ const About = () => {
               </Text>
             </Box>
           </div>
-          <div class="col-lg-4">
+          <div className="col-lg-4">
             <Box data-aos="fade-left">
-              <IconWrap />
+              <IconWrap>
+                <Demo />
+              </IconWrap>
               <BoxTitle>Learn Once, Write Anywhere</BoxTitle>
               <Text>
                 We don’t make assumptions about the rest of your technology

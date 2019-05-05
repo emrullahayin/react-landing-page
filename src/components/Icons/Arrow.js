@@ -13,7 +13,7 @@ const pulse = keyframes`
     } 
 `;
 
-const ArrowIcon = styled.svg`
+const Icon = styled.svg`
   position: absolute;
   left: 50%;
   bottom: -75px;
@@ -24,11 +24,12 @@ const ArrowIcon = styled.svg`
 
 const Arrow = props => {
   return (
-    <ArrowIcon
+    <Icon
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="31"
       viewBox="0 0 20 31"
+      fillRule="evenodd"
       {...props}
     >
       <path
@@ -36,7 +37,7 @@ const Arrow = props => {
         //fill-rule="evenodd"
         d="M19.5 20.69l-.754-.78-8.212 8.479V.5H9.466v27.89l-8.21-8.48-.756.78L10 30.5z"
       />
-    </ArrowIcon>
+    </Icon>
   );
 };
 export default Arrow;
