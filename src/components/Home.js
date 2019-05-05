@@ -133,8 +133,8 @@ const Home = () => {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </SubTitle>
-        {/* <Box>
-          <Arrow />
+        {/* <Box data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+          <Arrow data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1200"/>
         </Box> */}
       </div>
     </Section>
