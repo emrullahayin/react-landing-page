@@ -21,7 +21,7 @@ const Section = styled.section`
     width: 0;
     height: 0;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     border-bottom: 10px solid #fff;
     z-index: 2;
   }
