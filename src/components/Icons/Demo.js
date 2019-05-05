@@ -8,7 +8,6 @@ const Icon = styled.svg`
 const Demo = props => {
   return (
     <Icon
-      width="auto"
       height="70px"
       viewBox="0 0 32 36"
       version="1.1"

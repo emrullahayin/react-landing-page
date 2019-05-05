@@ -22,7 +22,10 @@ const SubTitle = styled.h5`
   line-height: normal;
   text-align: center;
   color: #aeaeae;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  @media (min-width: 992px) {
+    margin-bottom: 50px;
+  }
 `;
 
 const Box = styled.div`
@@ -30,8 +33,13 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 30px;
   &:hover {
     transform: translateY(-5px) !important;
+  }
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
   }
 `;
 
@@ -73,6 +81,8 @@ const Text = styled.p`
 `;
 
 const About = () => {
+  const width = window.innerWidth;
+  console.log("width", width);
   return (
     <Section id="about">
       <div className="container">
@@ -80,7 +90,7 @@ const About = () => {
         <SubTitle>Lorem ipsum dolor sit amet</SubTitle>
         <div className="row">
           <div className="col-lg-4">
-            <Box data-aos="fade-right">
+            <Box data-aos={width > 991 ? "fade-right" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
@@ -107,7 +117,7 @@ const About = () => {
             </Box>
           </div>
           <div className="col-lg-4">
-            <Box data-aos="fade-left">
+            <Box data-aos={width > 991 ? "fade-left" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
