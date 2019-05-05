@@ -1,16 +1,18 @@
 import React, { useEffect, Fragment } from "react";
+import AOS from "aos";
+import $ from "jquery";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-import $ from "jquery";
-
+import "aos/dist/aos.css";
 import "./assets/styles/main.scss";
 
 const App = () => {
   useEffect(() => {
+    AOS.init();
     let mainNavLinks = $("nav a.nav-link");
     let navElement = $("nav");
     let scrollTop = $(window).scrollTop();

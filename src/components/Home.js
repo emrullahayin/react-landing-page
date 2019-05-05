@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
+import React from "react";
 
-import bgImg from "../assets/img/bg-home.jpg";
 import styled from "styled-components";
-import "aos/dist/aos.css";
 
 import Arrow from "./Icons/Arrow";
+import bgImg from "../assets/img/bg-home.jpg";
 
 const Section = styled.section`
   position: relative;
@@ -113,10 +111,6 @@ const Box = styled.div`
 `;
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init();
-    console.log("AOS.init()", AOS);
-  });
   return (
     <Section id="home">
       <BgOverlay />
@@ -134,7 +128,11 @@ const Home = () => {
           industry.
         </SubTitle>
         {/* <Box data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-          <Arrow data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1200"/>
+          <Arrow
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-delay="1200"
+          />
         </Box> */}
       </div>
     </Section>

@@ -5,20 +5,18 @@
 @import "pages/header";
 
 section {
-  text-align: center;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   +section {
-    background-color: #fff;
-    height: 100vh;
-    color: $color-red;
-
     +section {
+      background-color: #fff;
+      height: 100vh;
+      color: $color-red;
       background-color: $color-red;
       color: #fff;
+      text-align: center;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
