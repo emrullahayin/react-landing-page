@@ -39,7 +39,6 @@ const Section = styled.section`
   }
 
   @media (min-width: 992px) {
-    max-height: 720px;
     padding-left: 110px;
     padding-right: 110px;
     padding-top: 279px;
