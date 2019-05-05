@@ -12,12 +12,13 @@ section {
   justify-content: center;
 
   +section {
-    background-color: $color-red;
+    background-color: #fff;
     height: 100vh;
+    color: $color-red;
 
     +section {
-      background-color: $color-lightgray;
-      color: $color-red;
+      background-color: $color-red;
+      color: #fff;
     }
   }
 }

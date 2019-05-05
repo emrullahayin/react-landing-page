@@ -15,6 +15,29 @@ const Section = styled.section`
   background-attachment: fixed;
   background-image: url(${bgImg});
 
+  &:after,
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 10px solid #fff;
+    z-index: 2;
+  }
+
+  &:before {
+    left: 0;
+    border-right: 12px solid transparent;
+    border-left: calc(50vw - 12px) solid #fff;
+  }
+
+  &:after {
+    right: 0;
+    border-left: 12px solid transparent;
+    border-right: calc(50vw - 12px) solid #fff;
+  }
+
   @media (min-width: 992px) {
     max-height: 720px;
     padding-left: 110px;
@@ -23,26 +46,26 @@ const Section = styled.section`
     padding-bottom: 111px;
   }
 
-  &:after {
-    content: "";
-    background: linear-gradient(33deg, #8400ff, #413bff);
-    opacity: 0.9;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    top: 0;
-
-    @media (min-width: 992px) {
-      background-image: linear-gradient(62deg, #8400ff, #413bff);
-    }
-  }
   .container {
     z-index: 1;
     user-select: none;
     cursor: default;
+  }
+`;
+
+const BgOverlay = styled.div`
+  background: linear-gradient(33deg, #8400ff, #413bff);
+  opacity: 0.9;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+
+  @media (min-width: 992px) {
+    background-image: linear-gradient(62deg, #8400ff, #413bff);
   }
 `;
 
@@ -91,6 +114,7 @@ const Box = styled.div`
 const Home = () => {
   return (
     <Section id="home">
+      <BgOverlay />
       <div className="container">
         <HomeTitle>
           It is a long established fact that a reader will be distracted by the
@@ -100,9 +124,9 @@ const Home = () => {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </SubTitle>
-        <Box>
+        {/* <Box>
           <Arrow />
-        </Box>
+        </Box> */}
       </div>
     </Section>
   );
