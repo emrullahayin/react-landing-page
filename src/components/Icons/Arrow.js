@@ -1,16 +1,16 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const bounce = keyframes`
-  0% {
-    transform: translateX(-50%) translateY(5px); 
-  }
-  50% {
-    transform: translateX(-50%) translateY(-5px); 
-  }
-  100% {
-    transform: translateX(-50%) translateY(5px); 
-  }
+const pulse = keyframes`
+    0% {
+      transform: translate(-50%, 0); 
+    }
+    50% {
+      transform: translate(-50%, 10px); 
+    }
+    100% {
+      transform: translate(-50%, 0); 
+    } 
 `;
 
 const ArrowIcon = styled.svg`
@@ -18,7 +18,8 @@ const ArrowIcon = styled.svg`
   left: 50%;
   bottom: -75px;
   z-index: 2;
-  animation: ${bounce} 2s cubic-bezier(0, 0.31, 0.46, 1.64) infinite;
+  animation: pulse 2s infinite;
+  animation: ${pulse} 2s cubic-bezier(0, 0.31, 0.46, 1.64) infinite;
 `;
 
 const Arrow = props => {
@@ -28,6 +29,7 @@ const Arrow = props => {
       width="20"
       height="31"
       viewBox="0 0 20 31"
+      {...props}
     >
       <path
         fill="#F8FAFF"

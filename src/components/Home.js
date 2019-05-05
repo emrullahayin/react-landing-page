@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 import bgImg from "../assets/img/bg-home.jpg";
 import styled from "styled-components";
+import "aos/dist/aos.css";
 
 import Arrow from "./Icons/Arrow";
 
@@ -111,15 +113,23 @@ const Box = styled.div`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+    console.log("AOS.init()", AOS);
+  });
   return (
     <Section id="home">
       <BgOverlay />
       <div className="container">
-        <HomeTitle>
+        <HomeTitle data-aos="zoom-in">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.{" "}
         </HomeTitle>
-        <SubTitle>
+        <SubTitle
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-delay="400"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </SubTitle>
