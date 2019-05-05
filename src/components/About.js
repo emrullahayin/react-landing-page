@@ -78,11 +78,11 @@ const Text = styled.p`
   line-height: 1.58;
   color: #8f8f8f;
   margin-bottom: 0;
+  max-width: 350px;
 `;
 
 const About = () => {
   const width = window.innerWidth;
-  console.log("width", width);
   return (
     <Section id="about">
       <div className="container">
@@ -90,7 +90,7 @@ const About = () => {
         <SubTitle>Lorem ipsum dolor sit amet</SubTitle>
         <div className="row">
           <div className="col-lg-4">
-            <Box data-aos={width > 991 ? "fade-right" : "fade-up"}>
+            <Box data-aos={width >= 1200 ? "fade-right" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
@@ -117,7 +117,7 @@ const About = () => {
             </Box>
           </div>
           <div className="col-lg-4">
-            <Box data-aos={width > 991 ? "fade-left" : "fade-up"}>
+            <Box data-aos={width >= 1200 ? "fade-left" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
