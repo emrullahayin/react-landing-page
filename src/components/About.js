@@ -90,7 +90,7 @@ const About = () => {
         <SubTitle>Lorem ipsum dolor sit amet</SubTitle>
         <div className="row">
           <div className="col-lg-4">
-            <Box data-aos={width >= 1200 ? "fade-right" : "fade-up"}>
+            <Box data-aos={width >= 1400 ? "fade-right" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
@@ -117,7 +117,7 @@ const About = () => {
             </Box>
           </div>
           <div className="col-lg-4">
-            <Box data-aos={width >= 1200 ? "fade-left" : "fade-up"}>
+            <Box data-aos={width >= 1400 ? "fade-left" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
