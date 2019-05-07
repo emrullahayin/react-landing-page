@@ -16,7 +16,6 @@ const Demo = props => {
     >
       <defs />
       <g
-        id="Symbols"
         stroke="none"
         strokeWidth="1"
         fill="none"
