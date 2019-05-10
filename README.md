@@ -17,8 +17,3 @@ git clone https://github.com/emrullahayin/react-landing-page.git
 ## Deployment
 
 The app can be deployed using either Netlify
-
-## Built With
-
-- Javascript
-- React - (UI library)
