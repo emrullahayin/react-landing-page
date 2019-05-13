@@ -17,7 +17,9 @@ const App = () => {
     let navElement = $("nav");
     let scrollTop = $(window).scrollTop();
 
-    activeTab(scrollTop);
+    $(function() {
+      activeTab(scrollTop);
+    });
 
     mainNavLinks.on("click", function(event) {
       event.preventDefault();
