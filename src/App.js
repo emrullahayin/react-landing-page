@@ -12,9 +12,8 @@ import "./assets/styles/main.scss";
 
 const App = () => {
   useEffect(() => {
-
     AOS.init({ once: true });
-    
+
     let mainNavLinks = $("nav a.nav-link");
     let navElement = $("nav");
     let scrollTop = $(window).scrollTop();
