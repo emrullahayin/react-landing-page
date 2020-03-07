@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 const Header = () => {
   const scrollTo = id => e => {
     e.preventDefault();
-    console.log("id", id);
     scroll.scrollTo({
       duration: 1500,
       delay: 100,

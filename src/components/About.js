@@ -67,13 +67,13 @@ const IconWrap = styled.div`
 
 const BoxTitle = styled.h4`
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
   color: #5273c7;
 `;
 
 const Text = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.58;
   color: #8f8f8f;
