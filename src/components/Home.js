@@ -18,24 +18,23 @@ const Section = styled.section`
   &:after,
   &:before {
     content: "";
-    width: 0;
-    height: 0;
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
+    display: block;
     border-bottom: 10px solid #fff;
-    z-index: 2;
+    z-index: 1;
   }
 
   &:before {
-    left: 0;
-    border-right: 12px solid transparent;
-    border-left: calc(50vw - 12px) solid #fff;
+    left: 50%;
+    right: 0px;
+    border-left: 11px solid transparent;
   }
 
   &:after {
-    right: 0;
-    border-left: 12px solid transparent;
-    border-right: calc(50vw - 12px) solid #fff;
+    right: 50%;
+    left: 0px;
+    border-right: 11px solid transparent;
   }
 
   @media (min-width: 992px) {
