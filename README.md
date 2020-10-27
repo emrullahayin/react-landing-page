@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/71807ce6-e7ee-4ee5-81c3-f548f8a8f5cd/deploy-status)](https://app.netlify.com/sites/react-landing-page/deploys)
+
 # React Landing Page
 
 ## Installing
