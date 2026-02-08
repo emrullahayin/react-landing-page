@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   ArrowRight,
   CheckCircle2,
@@ -17,22 +17,18 @@ import {
   ChevronDown,
 } from 'lucide-react';
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: {
     opacity: 0,
     y: 20,
-    transition: {
-      type: 'spring',
-      stiffness: 260,
-      damping: 20,
-    },
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.19, 1, 0.22, 1],
+      type: 'spring', // Artık TS bunun bir "spring" tipi olduğunu biliyor
+      stiffness: 260,
+      damping: 20,
     },
   },
 };
