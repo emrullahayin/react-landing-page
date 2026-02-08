@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+/* v4 ile gelen yeni tema değişkenleri tanımı */
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(14.5% 0.018 256);
+
+  --color-primary: oklch(58.5% 0.22 261);
+  --color-primary-foreground: oklch(98.5% 0.001 106);
+
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+}
+
+/* Custom CSS Rules */
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-border, oklch(92.8% 0.006 264.5));
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+@utility glass-effect {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
